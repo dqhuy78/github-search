@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from "react-router-dom";
+
+import 'assets/styles/tailwind.css';
+import 'assets/styles/app.css';
+import HomePage from 'pages/HomePage';
+import DetailPage from 'pages/DetailPage';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="app">
+            <Switch>
+                <Route exact path="/" component={HomePage} />
+                <Route exact path="/detail/:username" component={DetailPage} />
+            </Switch>
+        </div>
+    );
 }
 
 export default App;
