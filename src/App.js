@@ -6,9 +6,9 @@ import 'assets/styles/app.css';
 import HomePage from 'pages/HomePage';
 import DetailPage from 'pages/DetailPage';
 
-function App() {
+const App = () => {
     return (
-        <div className="app">
+        <div className="app w-100 h-screen overflow-hidden" style={{ backgroundColor: '#f7f8fe' }}>
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route exact path="/detail/:username" component={DetailPage} />

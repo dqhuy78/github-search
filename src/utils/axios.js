@@ -1,5 +1,9 @@
 import axios from 'axios';
 
-export default axios.create({
+const instance = axios.create({
     baseURL: 'https://api.github.com'
 });
+instance.CancelToken = axios.CancelToken;
+instance.isCancel = axios.isCancel
+
+export default instance;
