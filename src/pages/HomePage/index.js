@@ -63,7 +63,7 @@ const HomePage = () => {
 
     return (
         <div className="container mx-auto pt-8 w-100 h-100 flex flex-col items-center">
-            <div className="px-4 py-8 shadow-lg rounded flex items-center" style={{ backgroundColor: '#fff', width: 600 }}>
+            <div className="px-4 py-8 shadow-lg rounded flex items-center bg-white" style={{ width: 600 }}>
                 <Input.Search
                     placeholder="Search by username"
                     enterButton
@@ -80,8 +80,8 @@ const HomePage = () => {
             </div>
             <Spin size="large" tip="Loading" spinning={isLoading()} delay="200">
                 <div
-                    className="mt-4 px-4 py-8 shadow-lg rounded overflow-y-auto scroll"
-                    style={{ backgroundColor: '#fff', width: 600, height: 'calc(100vh - 170px)' }}
+                    className="mt-4 px-4 py-8 shadow-lg rounded overflow-y-auto scroll bg-white"
+                    style={{ width: 600, height: 'calc(100vh - 170px)' }}
                 >
                     <p className="font-bold mb-6">Result found: {getTotal()}</p>
                     {render()}

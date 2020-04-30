@@ -12,7 +12,7 @@ const App = () => {
         <div className="app w-100 h-screen overflow-hidden" style={{ backgroundColor: '#f7f8fe' }}>
             <div className="flex h-screen">
                 <div className="w-64 shadow-2xl flex flex-col justify-center items-center" style={{backgroundColor: '#24292e'}}>
-                    <span className="rounded-full inline-block" style={{backgroundColor: '#fff'}}>
+                    <span className="rounded-full inline-block bg-white">
                         <GithubOutlined style={{fontSize: 90}} />
                     </span>
                     <p className="text-xl font-bold text-white mt-4">Github User Search</p>
