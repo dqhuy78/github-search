@@ -51,7 +51,7 @@ const HomePage = () => {
                             </div>
                         </div>
                         <Button type="primary">
-                            <Link to={`/detail/${user.login}`}>
+                            <Link to={`/github-search/detail/${user.login}`}>
                                 Detail
                             </Link>
                         </Button>
