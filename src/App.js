@@ -19,8 +19,8 @@ const App = () => {
                 </div>
                 <div className="flex flex-grow">
                     <Switch>
-                        <Route exact path="/github-search" component={HomePage} />
-                        <Route exact path="/github-search/detail/:username" component={DetailPage} />
+                        <Route exact path="/" component={HomePage} />
+                        <Route exact path="/detail/:username" component={DetailPage} />
                     </Switch>
                 </div>
             </div>
