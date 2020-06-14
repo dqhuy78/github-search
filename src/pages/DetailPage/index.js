@@ -32,7 +32,7 @@ const formatDate = (date) => {
     if (date && typeof(date) === 'string') {
         return date.substr(0, 10).split('-').reverse().join('-');
     }
-    return 'Unknow';
+    return 'Unknown';
 }
 
 const DetailPage = () => {
@@ -68,7 +68,7 @@ const DetailPage = () => {
                     className="px-4 py-2 shadow-lg rounded bg-white box-border"
                     style={{ width: 600, height: 170 }}
                 >
-                    <Link to="/github-search" className="text-black">
+                    <Link to="/" className="text-black">
                         <ArrowLeftOutlined className="font-bold text-lg cursor-pointer" />
                     </Link>
                     {
