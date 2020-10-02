@@ -79,7 +79,7 @@ const DetailPage = () => {
                                     <p className="text-2xl font-bold mb-2">{user.name}</p>
                                     <p className="mb-1 flex items-center">
                                         <GithubOutlined />
-                                        <span className="ml-2 mr-1">Github:</span>
+                                        <span className="ml-2 mr-1">Profile:</span>
                                         {' '}
                                         <a href={user.html_url} target="__blank">{user.html_url}</a>
                                     </p>
