@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Input, Avatar, Button, Spin, Result } from 'antd';
 import { ClearOutlined } from '@ant-design/icons'
@@ -19,6 +19,10 @@ const HomePage = () => {
         handleLoadMore
     ] = useFetchDataHook(keyword);
 
+    useEffect(() => {
+        document.title = 'Home'
+    }, []);
+
     function handleInputChange(e) {
         setKeyword(e.target.value)
     }
@@ -34,7 +38,7 @@ const HomePage = () => {
         }
         if (isLoadSuccess()) {
             if (getTotal() === 0) {
-                return <Result title="No user found" />
+                return keyword === '' ? <Result title="Enter some keyword" /> : <Result title="No user found" />
             } else {
                 return getData().map((user, index) => (
                     <div key={user.id} className="flex items-center mb-6 pb-6 justify-between" style={{ borderBottom: '1px solid #ccc' }}>
