@@ -46,6 +46,10 @@ const DetailPage = () => {
         handleLoadMore
     ] = useFetchDataHook(username, getRepoList);
 
+    useEffect(() => {
+        document.title = 'Detail'
+    }, []);
+
     const user = getUser();
     const repos = getRepos();
 
