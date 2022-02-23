@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
+    "@loadable/component": "^5.15.2",
     "antd": "^4.1.5",
     "autoprefixer": "^9.7.6",
     "axios": "^0.21.1",

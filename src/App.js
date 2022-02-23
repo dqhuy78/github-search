@@ -1,11 +1,16 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import { GithubOutlined } from '@ant-design/icons';
+import loadable from '@loadable/component'
 
 import 'assets/styles/tailwind.css';
 import 'assets/styles/app.css';
 import HomePage from 'pages/HomePage';
 import DetailPage from 'pages/DetailPage';
+
+const LoadableHomePage = loadable(() => import('./pages/HomePage/index'))
+const LoadableDetailPage = loadable(() => import('./pages/DetailPage/index'))
+
 
 const App = () => {
     return (
@@ -19,8 +24,8 @@ const App = () => {
                 </div>
                 <div className="flex flex-grow">
                     <Switch>
-                        <Route exact path="/" component={HomePage} />
-                        <Route exact path="/detail/:username" component={DetailPage} />
+                        <Route exact path="/" component={LoadableHomePage} />
+                        <Route exact path="/detail/:username" component={LoadableDetailPage} />
                     </Switch>
                 </div>
             </div>
