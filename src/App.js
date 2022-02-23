@@ -1,11 +1,13 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import { GithubOutlined } from '@ant-design/icons';
+import loadable from '@loadable/component'
 
 import 'assets/styles/tailwind.css';
 import 'assets/styles/app.css';
-import HomePage from 'pages/HomePage';
-import DetailPage from 'pages/DetailPage';
+
+const HomePage = loadable(() => import('./pages/HomePage/index'))
+const DetailPage = loadable(() => import('./pages/DetailPage/index'))
 
 const App = () => {
     return (
